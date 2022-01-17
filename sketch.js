@@ -83,8 +83,8 @@ function draw() {
   /*Uncomment correct statement so that 
   game goes to "END" state 
   when red balloon is hit*/
-  if (arrowGroup.isTouching(redB)) 
-  //if (arrowGroup.Collide(redB)) 
+ if (arrowGroup.isTouching(redB)) 
+//  if (arrowGroup.Collide(redB)) 
   //if (arrowGroup.isCollide(redB)) 
   if(frameCount>700)//comment this line after selecting the solution
   {
@@ -104,25 +104,24 @@ function draw() {
   score=score+3;
 }
 
-/*Uncomment correct if block to 
-destroy the blue balloon when hit 
-by the arrows */
+//*Uncomment correct if block to 
+//destroy the blue balloon when hit 
+//by the arrows *
+ // if (arrowGroup.isTouching(blueB))
+  // { blueB.destroyEach();
+  // arrowGroup.destroyEach();
+   //score=score+2;
+ //}
 
-//  if (arrowGroup.isTouching(blueB)) {
-//   blueB.destroyEach();
-//   arrowGroup.destroyEach();
-//   score=score+2;
+
+ // if (arrowGroup.isTouching(redB)) {
+  // blueB.destroyEach();
+  // arrowGroup.destroyEach();
 // }
 
 
-  if (arrowGroup.isTouching(redB)) {
-   blueB.destroyEach();
-   arrowGroup.destroyEach();
- }
-
-
 //  if (arrowGroup.isTouching(blueB)) {
-//   arrowGroup.destroyEach();
+ //  arrowGroup.destroyEach();
 // }
 
 
@@ -130,7 +129,8 @@ if (arrowGroup.isTouching(pinkB)) {
   pinkB.destroyEach();
   arrowGroup.destroyEach();
   score=score+1;
-}
+ }
+
  }
   
   drawSprites();
@@ -184,6 +184,8 @@ function pinkBalloon() {
   arrow.velocityX = -4;
   arrow.lifetime = 100;
   arrow.scale = 0.3;
-  arrowGroup.add(arrow);
-   
-}
+  arrowGroup.add(arrow);}
+
+
+
+
